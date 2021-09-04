@@ -4,10 +4,19 @@ import './App.css';
 var sportsDictionary = {
   "⚾" : "baseball",
   "🏐" : "volleyball",
+  "⚽" : "football",
+  "🏉" : "rugby",
   "🏏" : "cricket",
   "🎾" : "tennis",
   "🏸" : "badminton",
   "🎱" : "pool",
+  "🎳" : "bowling",
+  "🏑" : "field hockey",
+  "🏒" : "ice hockey",
+  "🎿" : "skiing",
+  "🥊" : "boxing",
+  "🏓" : "ping-pong",
+  
 }
 
 var sportsArray = Object.keys(sportsDictionary);
@@ -39,29 +48,35 @@ function App(){
   return (
     <div>
       <div className="navbar">
-        <h1>Know your sports emoji!</h1>
+        <h1 style={{fontSize: "45px"}}>Know your sports emoji!</h1>
       </div>
       <div className="main">
         <div className="desc">
-          Enter your sport emoji to know which sport it is!
-          <br/> Else choose one of the popular sports below.
+          <p style={{fontSize: "35px", fontWeight: "normal", lineHeight: "1.5"}}>
+            Enter your sport emoji to know which sport it is!
+            <br/> Else choose one of the popular sports below.
+          </p>
         </div>
         <div className="emoji-input">
-          <input onChange={handleEmojiInput}></input>
-        </div>
-        <div className="emoji-output">
-          <h1>{emojiMeaning}</h1>
+          <input 
+            onChange={handleEmojiInput}
+            style={{width: "500px", height: "100%", fontSize: "28px", paddingLeft: "10px"}}
+            >
+            </input>
         </div>
         <div className="premade-list">
           {sportsArray.map( item => 
             <span 
               key={item} 
               onClick={() => handleEmojiClick(item)} 
-              style={{cursor: "pointer", fontSize: "3rem"}
+              style={{cursor: "pointer", fontSize: "2.5rem", margin: "5px"}
             }>
               {item}
             </span>
           )}
+        </div>
+        <div className="emoji-output">
+          <h1>{emojiMeaning}</h1>
         </div>
       </div>
     </div>
