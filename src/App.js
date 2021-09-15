@@ -46,9 +46,9 @@ function App(){
   }
 
   return (
-    <div>
+    <div className="App">
       <div className="navbar">
-        <h1 style={{fontSize: "45px"}}>Know your sports emoji!</h1>
+        <h1 style={{fontSize: "45px"}}>Flag Emoji Library!</h1>
       </div>
       <div className="main">
         <div className="desc">
@@ -79,6 +79,19 @@ function App(){
           <h1>{emojiMeaning}</h1>
         </div>
       </div>
+      <div class="bottom-container">
+      <div class="icons">
+        <a class="footer-link" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/hamza-husein/"><i
+            class="fab fa-linkedin fa-2x"></i></a>
+        <a class="footer-link" rel="noreferrer" target="_blank" href="https://github.com/Hamdrive"><i
+            class="fab fa-github fa-2x"></i></a>
+        <a class="footer-link" rel="noreferrer" target="_blank" href="https://hamzahusein.netlify.app"><i 
+        class="fas fa-user fa-2x"></i></a>
+        <a class="footer-link" rel="noreferrer" target="_blank" href="https://twitter.com/itsHamhere"><i
+            class="fab fa-twitter-square fa-2x"></i></a>
+      </div>
+      <p class="copyright">© 2021 Hamza Husein</p>
+    </div>
     </div>
   )
 }
