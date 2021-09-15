@@ -32,7 +32,6 @@ function App(){
     }
 
     var meaning = sportsDictionary[emojiInput];
-    console.log(emojiInput)
     if(meaning === undefined){
       setEmojiMeaning("We dont have this sport in our database")
     }else{
